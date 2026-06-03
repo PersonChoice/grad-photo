@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>时光回忆录</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            milk: '#FCFAF4',
+            coffee: '#BFA88A',
+            lightCoffee: '#E9DFD2',
+          },
+          fontFamily: {
+            warm: ['system-ui','PingFang SC','微软雅黑','serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .photo-card {
+        border: 7px solid #ffffff;
+        box-shadow: 3px 4px 12px rgba(191,168,138,0.22);
+      }
+      .fade-up {
+        opacity: 0;
+        transform: translateY(22px);
+        transition: all 0.65s ease-out;
+      }
+      .fade-up.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-milk font-warm text-coffee/85 overflow-x-hidden">
+  <!-- 顶部导航 -->
+  <nav id="navBar" class="fixed w-full top-0 py-4 transition-all duration-300 z-50">
+    <div class="container px-5 mx-auto">
+      <h1 class="text-xl font-light">时光回忆录</h1>
+    </div>
+  </nav>
+
+  <!-- 首屏启动页 -->
+  <section class="h-screen flex flex-col items-center justify-center px-5">
+    <div class="text-center">
+      <h2 class="text-[clamp(1.8rem,7vw,2.8rem)] font-light mb-6 tracking-wide">珍藏细碎时光</h2>
+      <button id="startBtn" class="px-8 py-4 bg-coffee text-white rounded-full shadow-md hover:bg-coffee/80 transition-all duration-300 text-lg">
+        <i class="fa fa-bookmark-o mr-2"></i>开启回忆
+      </button>
+      <p class="mt-6 text-coffee/60 text-sm">点击开启，慢慢翻阅往日瞬间</p>
+    </div>
+  </section>
+
+  <!-- 16张照片区域（无备注，匹配你的文件名） -->
+  <section id="photoList" class="pb-20 px-5 max-w-xl mx-auto">
+    <div class="text-center mb-12 fade-up">
+      <h3 class="text-2xl font-light">我的回忆相册</h3>
+      <div class="w-14 h-[1.5px] bg-coffee/40 mx-auto mt-3"></div>
+    </div>
+
+    <div class="space-y-10">
+      <!-- 1 -->
+      <div class="fade-up">
+        <div class="photo-card rounded-md overflow-hidden">
+          <img src="images/photo (1).jpg" alt="回忆照片" class="w-full object-cover">
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="fade-up">
+        <div class="photo-card rounded-md overflow-hidden">
+          <img src="images/photo (2).jpg" alt="回忆照片" class="w-full object-cover">
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="fade-up">
+        <div class="photo-card rounded-md overflow-hidden">
+          <img src="images/photo (3).jpg" alt="回忆照片" class="w-full object-cover">
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="fade-up">
+        <div class="photo-card rounded-md overflow-hidden">
+          <img src="images/photo (4).jpg" alt="回忆照片" class="w-full object-cover">
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="fade-up">
+        <div class="photo-card rounded-md overflow-hidden">
+          <img src="images/photo (5).jpg" alt="回忆照片" class="w-full object-cover">
+        </div>
+      </div>
+      <!-- 6 -->
+      <div class="fade-up">
+        <div class="photo-card rounded-md overflow-hidden">
+          <img src="images/photo (6).jpg" alt="回忆照片" class="w-full object-cover">
+        </div>
+      </div>
+      <!-- 7 -->
+      <div class="fade-up">
+        <div class="photo-card rounded-md overflow-hidden">
+          <img src="images/photo (7).jpg" alt="回忆照片" class="w-full object-cover">
+        </div>
+      </div>
+      <!-- 8 -->
+      <div class="fade-up">
+        <div class="photo-card rounded-md overflow-hidden">
+          <img src="images/photo (8).jpg" alt="回忆照片" class="w-full object-cover">
+        </div>
+      </div>
+      <!-- 9 -->
+      <div class="fade-up">
+        <div class="photo-card rounded-md overflow-hidden">
+          <img src="images/photo (9).jpg" alt="回忆照片" class="w-full object-cover">
+        </div>
+      </div>
+      <!-- 10 -->
+      <div class="fade-up">
+        <div class="photo-card rounded-md overflow-hidden">
+          <img src="images/photo (10).jpg" alt="回忆照片" class="w-full object-cover">
+        </div>
+      </div>
+      <!-- 11 -->
+      <div class="fade-up">
+        <div class="photo-card rounded-md overflow-hidden">
+          <img src="images/photo (11).jpg" alt="回忆照片" class="w-full object-cover">
+        </div>
+      </div>
+      <!-- 12 -->
+      <div class="fade-up">
+        <div class="photo-card rounded-md overflow-hidden">
+          <img src="images/photo (12).jpg" alt="回忆照片" class="w-full object-cover">
+        </div>
+      </div>
+      <!-- 13 -->
+      <div class="fade-up">
+        <div class="photo-card rounded-md overflow-hidden">
+          <img src="images/photo (13).jpg" alt="回忆照片" class="w-full object-cover">
+        </div>
+      </div>
+      <!-- 14 -->
+      <div class="fade-up">
+        <div class="photo-card rounded-md overflow-hidden">
+          <img src="images/photo (14).jpg" alt="回忆照片" class="w-full object-cover">
+        </div>
+      </div>
+      <!-- 15 -->
+      <div class="fade-up">
+        <div class="photo-card rounded-md overflow-hidden">
+          <img src="images/photo (15).jpg" alt="回忆照片" class="w-full object-cover">
+        </div>
+      </div>
+      <!-- 16 -->
+      <div class="fade-up">
+        <div class="photo-card rounded-md overflow-hidden">
+          <img src="images/photo (16).jpg" alt="回忆照片" class="w-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="py-6 text-center text-sm text-coffee/60 bg-lightCoffee/20">
+    <p>珍藏所有温柔瞬间 · 毕业回忆相册</p>
+  </footer>
+
+  <script>
+    // 点击开启回忆
+    const startBtn = document.getElementById('startBtn');
+    const photoWrap = document.getElementById('photoList');
+    startBtn.addEventListener('click',()=>{
+      photoWrap.scrollIntoView({behavior:"smooth"})
+    })
+
+    // 导航栏滚动效果
+    const nav = document.getElementById('navBar');
+    window.addEventListener('scroll',()=>{
+      if(window.scrollY>60){
+        nav.classList.add('bg-milk/92','shadow-sm')
+      }else{
+        nav.classList.remove('bg-milk/92','shadow-sm')
+      }
+    })
+
+    // 照片滚动渐入
+    const fadeItems = document.querySelectorAll('.fade-up');
+    function checkShow(){
+      fadeItems.forEach(item=>{
+        const rect = item.getBoundingClientRect();
+        if(rect.top < window.innerHeight*0.83){
+          item.classList.add('show')
+        }
+      })
+    }
+    window.addEventListener('scroll',checkShow);
+    checkShow();
+  </script>
+</body>
+</html>
